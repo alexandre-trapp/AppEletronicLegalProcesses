@@ -25,12 +25,15 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">Processos baixados</a>
+                <a asp-area="" asp-controller="Formulario" asp-action="Formulario"></a>
             </div>
         </div>
     </nav>
+    
     <div class="container body-content">
         @RenderBody()
     </div>
+
     <nav class="navbar navbar-inverse navbar-fixed-bottom">
         <div class="rodape">
             <footer>
@@ -38,6 +41,7 @@
             </footer>
         </div>
     </nav>
+
     <environment include="Development">
         <script src="~/lib/jquery/dist/jquery.js"></script>
         <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>

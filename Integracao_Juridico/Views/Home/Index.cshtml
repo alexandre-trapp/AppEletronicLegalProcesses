@@ -6,9 +6,9 @@
     <div>
         <h4 style="margin-top: 30px">Processos</h4>
 
-        <table class="table table-responsive table-hover" style="color: #444040">
+        <table id="tabelaProcessos" class="table table-responsive table-hover">
 
-            <tr class="active">
+            <tr>
                 <th class="col-lg-3">
                     Data de distribuição
                 </th>
@@ -25,6 +25,7 @@
                     0599794-97.1991.8.02.0008
                 </td>
             </tr>
+
             <tr style="cursor: pointer">
                 <td class="col-lg-3">
                     22/03/2019
@@ -35,6 +36,23 @@
             </tr>
         </table>
 
+        <form id="formularioProcesso">
+            <div class="container">
+                <h3>Processo selecionado</h3>
+                <hr>
+
+                <label><b>Dados básicos</b></label><p>
+                    <textarea class="texto" type="text" readonly="readonly" id="dadosBasicos" required></textarea>
+                <p></p>
+
+                <label><b>Movimentações</b></label>
+                <p>
+                    <textarea class="texto" type="text" readonly="readonly" id="movimentacoes" required></textarea>
+            </div>
+        </form>
+
     </div>
 
 </div>
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script src="~/js/VisualizarDadosProcesso.js"></script>

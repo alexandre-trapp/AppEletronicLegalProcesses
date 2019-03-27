@@ -28,8 +28,8 @@
 }
 
 th {
-    background-color: #444040;
     color: black;
+    background-color: lightgray;
 }
 
 .rodape {
@@ -39,6 +39,11 @@ th {
     width: 90%;
 }
 
+.texto {
+    background-color: #f3f0f0;
+    height: 200px;
+    width: 600px;
+}
 /* Hide/rearrange for smaller screens */
 @media screen and (max-width: 767px) {
     /* Hide captions */
