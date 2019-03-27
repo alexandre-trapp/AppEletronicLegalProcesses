@@ -1,8 +1,8 @@
 ﻿using System;
 using System.IO;
 using System.ServiceModel;
-using System.ServiceModel.Description;
 using System.Text;
+using System.Threading.Tasks;
 using ConsultaPushPjeService;
 
 namespace Integracao_Juridico.Controllers
@@ -15,18 +15,8 @@ namespace Integracao_Juridico.Controllers
 
         public void Consultar()
         {
-            var bindig = new BasicHttpBinding();
-            //bindig.Security.Mode = BasicHttpSecurityMode.None;
-            
-            var client = new servicointercomunicacao222Client(bindig, new EndpointAddress(UrlServico));
-            client.ClientCredentials.UserName.UserName = UserName;
-            client.ClientCredentials.UserName.Password = Password;
-
-            var response = client.consultarProcessoAsync(GetRequest());
+            var response = ConnectService();
             response.Start();
-
-            if (response == null)
-                return;
 
             while (!response.IsCompleted)
                 response.Wait();
@@ -35,6 +25,33 @@ namespace Integracao_Juridico.Controllers
                 throw new Exception("Erro na consulta do processo: " + response.Status + response.Exception);
 
             TratarRetornoResponse(response);
+        }
+
+        private Task<consultarProcessoResponse> ConnectService()
+        {
+            var bindingConexao = new BasicHttpBinding
+            {
+                MaxReceivedMessageSize = 2147483647,
+                SendTimeout = TimeSpan.MaxValue
+            };
+            bindingConexao.Security.Mode = BasicHttpSecurityMode.None;
+            bindingConexao.Security.Transport.ClientCredentialType = HttpClientCredentialType.Basic;
+
+            var endpoint = new EndpointAddress(new Uri(UrlServico));
+            var client = new servicointercomunicacao222Client(bindingConexao, endpoint);
+            
+            client.ClientCredentials.UserName.UserName = UserName;
+            client.ClientCredentials.UserName.Password = Password;
+
+            using (new OperationContextScope(client.InnerChannel))
+            {
+                var request = GetRequest();
+                var response = client.consultarProcessoAsync(request);
+                if (response == null)
+                    throw new Exception("response nulo");
+
+                return response;
+            }
         }
 
         private static void TratarRetornoResponse(System.Threading.Tasks.Task<consultarProcessoResponse> response)
