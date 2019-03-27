@@ -8,6 +8,7 @@
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
+    width: 90%;
 }
 
 /* Carousel */
@@ -26,6 +27,18 @@
     margin: 15px;
 }
 
+th {
+    background-color: #444040;
+    color: black;
+}
+
+.rodape {
+    position: absolute; 
+    bottom: 0; 
+    margin-left: 10px; 
+    width: 90%;
+}
+
 /* Hide/rearrange for smaller screens */
 @media screen and (max-width: 767px) {
     /* Hide captions */
@@ -33,3 +46,4 @@
         display: none;
     }
 }
+

@@ -12,8 +12,8 @@ namespace Integracao_Juridico
         {
             Configuration = configuration;
 
-            var consultarProcesso = new ConsultaProcessosPjePush();
-            consultarProcesso.Consultar();
+            //var consultarProcesso = new ConsultaProcessosPjePush();
+            //consultarProcesso.Consultar();
         }
 
         public IConfiguration Configuration { get; }
