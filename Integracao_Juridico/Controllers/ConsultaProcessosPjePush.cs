@@ -9,18 +9,18 @@ namespace Integracao_Juridico.Controllers
 {
     public class ConsultaProcessosPjePush
     {
-        private const string UrlServico = @"http://wwwh.cnj.jus.br/pjemni-2x/intercomunicacao?wsdl";
+        private const string UrlServico = @"https://wwwh.cnj.jus.br/pjemni-2x/intercomunicacao?wsdl";
         private const string UserName = "alexandre.trapp@hotmail.com";
         private const string Password = "15303@le371030";
 
         public void Consultar()
         {
             var bindig = new BasicHttpBinding();
-            bindig.Security.Mode = BasicHttpSecurityMode.None;
-
+            //bindig.Security.Mode = BasicHttpSecurityMode.None;
+            
             var client = new servicointercomunicacao222Client(bindig, new EndpointAddress(UrlServico));
-            //client.ClientCredentials.UserName.UserName = UserName;
-            //client.ClientCredentials.UserName.Password = Password;
+            client.ClientCredentials.UserName.UserName = UserName;
+            client.ClientCredentials.UserName.Password = Password;
 
             var response = client.consultarProcessoAsync(GetRequest());
             response.Start();

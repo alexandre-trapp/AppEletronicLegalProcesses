@@ -1,4 +1,5 @@
 ﻿using System;
+using Integracao_Juridico.Controllers;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 

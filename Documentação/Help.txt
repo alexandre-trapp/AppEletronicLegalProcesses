@@ -1,0 +1,11 @@
+https://wwwh.cnj.jus.br/pjemni-2x/intercomunicacao?wsdl (consultas);
+https://wwwh.cnj.jus.br/pjemni-2x/ConsultaPJe?wsdl (auxiliares)
+
+https://stackoverflow.com/questions/10532271/the-xml-element-named-name-from-namespace-references-distinct-types
+
+
+0002934-09.2019.8.26.0278
+
+0001756-93.2019.8.26.0126
+
+0002516-05.2019.8.26.0009

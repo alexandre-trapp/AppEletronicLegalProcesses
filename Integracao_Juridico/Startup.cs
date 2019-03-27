@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using Integracao_Juridico.Controllers;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -10,6 +11,9 @@ namespace Integracao_Juridico
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
+
+            var consultarProcesso = new ConsultaProcessosPjePush();
+            consultarProcesso.Consultar();
         }
 
         public IConfiguration Configuration { get; }
