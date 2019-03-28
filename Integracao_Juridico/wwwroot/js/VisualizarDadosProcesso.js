@@ -2,11 +2,32 @@
 
     var url = "/Home/DadosProcesso";
     $.get(url, null, function (data) {
-        $("#dadosBasicos").html(data)
+
+        if (data === null || data === undefined)
+            return;
+
+        CreateRowsProcessos(data)
     });
     
 });
 
+function CreateRowsProcessos(data) {
+
+    var dados = JSON.parse(data);
+    var table = document.getElementById("tabelaProcessos");
+
+    for (var i = 0; i < dados.length; i++) {
+
+        var row = table.insertRow(1);
+        row.id = "linhaGrid";
+
+        var cell1 = row.insertCell(0);
+        var cell2 = row.insertCell(1);
+
+        cell1.innerHTML = dados[i].processo.dadosBasicos.dataAjuizamento;
+        cell2.innerHTML = dados[i].processo.dadosBasicos.numero;
+    }
+}
 
 
 /*

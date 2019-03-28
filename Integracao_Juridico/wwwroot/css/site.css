@@ -44,6 +44,11 @@ th {
     height: 200px;
     width: 600px;
 }
+
+#linhaGrid {
+    cursor: pointer;
+}
+
 /* Hide/rearrange for smaller screens */
 @media screen and (max-width: 767px) {
     /* Hide captions */

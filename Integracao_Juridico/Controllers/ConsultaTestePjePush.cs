@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Text;
 using ConsultaPushPjeService;
+using Newtonsoft.Json;
 
 namespace Integracao_Juridico.Controllers
 {
@@ -10,9 +11,8 @@ namespace Integracao_Juridico.Controllers
         private const string UserName = "alexandre.trapp@hotmail.com";
         private const string Password = "15303@le371030";
 
-        public string[] Consultar()
+        public string Consultar()
         {
-            var response = RetornarResponse();
             //response.Start();
 
             //while (!response.IsCompleted)
@@ -21,7 +21,8 @@ namespace Integracao_Juridico.Controllers
             //if (!response.IsCompletedSuccessfully)
             //    throw new Exception("Erro na consulta do processo: " + response.Status + response.Exception);
 
-            return TratarRetornoResponse(response);
+            var response = RetornarResponse();
+            return JsonConvert.SerializeObject(response);
         }
 
         private List<consultarProcessoResponse> RetornarResponse()
@@ -54,8 +55,6 @@ namespace Integracao_Juridico.Controllers
             {
                 new consultarProcessoResponse()
                 {
-
-
                     mensagem = "Consulta processo 1 efetuada com sucesso",
                     sucesso = true,
                     processo = new tipoProcessoJudicial
@@ -85,32 +84,6 @@ namespace Integracao_Juridico.Controllers
             };
 
             return response;
-        }
-
-        private static string[] TratarRetornoResponse(List<consultarProcessoResponse> responseList)
-        {
-            var retornoSb = new StringBuilder();
-
-            foreach (var response in responseList)
-            {
-                retornoSb.AppendLine("Mensagem: " + response.mensagem);
-                retornoSb.AppendLine("Sucesso? - " + response.sucesso);
-                retornoSb.AppendLine("Dados básicos - numero: " + response.processo.dadosBasicos.numero);
-                retornoSb.AppendLine("Data ajuizamento: " + response.processo.dadosBasicos.dataAjuizamento);
-                retornoSb.AppendLine("Valor causa: " + response.processo.dadosBasicos.valorCausa);
-            }
-
-            return retornoSb.ToString().Split('\n');
-        }
-
-        private consultarProcesso GetRequest()
-        {
-            return new consultarProcesso
-            {
-                idConsultante = UserName,
-                senhaConsultante = Password,
-                numeroProcesso = "0002934-09.2019.8.26.0278"
-            };
         }
     }
 }
