@@ -1,5 +1,16 @@
 ﻿$(document).ready(function () {
 
+    var url = "/Home/DadosProcesso";
+    $.get(url, null, function (data) {
+        $("#dadosBasicos").html(data)
+    });
+    
+});
+
+
+
+/*
+
     $("#tabelaProcessos tr").click(function ()
     {
         var tabela = document.getElementById("tabelaProcessos");
@@ -38,5 +49,4 @@
 
         $("#dadosBasicos").html(dados);
 
-    });
-});
+    }); */

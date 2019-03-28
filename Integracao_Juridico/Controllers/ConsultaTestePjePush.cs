@@ -1,21 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.ServiceModel;
+﻿using System.Collections.Generic;
 using System.Text;
-using System.Threading.Tasks;
 using ConsultaPushPjeService;
 
 namespace Integracao_Juridico.Controllers
 {
-    public class ConsultaProcessosPjePushController
+    public class ConsultaTestePjePush
     {
         private const string UrlServico = @"https://wwwh.cnj.jus.br/pjemni-2x/intercomunicacao?wsdl";
         private const string UserName = "alexandre.trapp@hotmail.com";
         private const string Password = "15303@le371030";
 
-        public List<string> Consultar()
+        public string[] Consultar()
         {
             var response = RetornarResponse();
             //response.Start();
@@ -92,7 +87,7 @@ namespace Integracao_Juridico.Controllers
             return response;
         }
 
-        private static List<string> TratarRetornoResponse(List<consultarProcessoResponse> responseList)
+        private static string[] TratarRetornoResponse(List<consultarProcessoResponse> responseList)
         {
             var retornoSb = new StringBuilder();
 
@@ -105,7 +100,7 @@ namespace Integracao_Juridico.Controllers
                 retornoSb.AppendLine("Valor causa: " + response.processo.dadosBasicos.valorCausa);
             }
 
-            return retornoSb.ToString().Split('\n').ToList();
+            return retornoSb.ToString().Split('\n');
         }
 
         private consultarProcesso GetRequest()
