@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Text;
 using ConsultaPushPjeService;
+using Integracao_Juridico.Models;
 using Newtonsoft.Json;
 
 namespace Integracao_Juridico.Controllers
@@ -25,7 +26,7 @@ namespace Integracao_Juridico.Controllers
             return JsonConvert.SerializeObject(response);
         }
 
-        private List<consultarProcessoResponse> RetornarResponse()
+        private List<DadosProcessosLayout> RetornarResponse()
         {
             //var bindingConexao = new BasicHttpBinding
             //{
@@ -51,36 +52,45 @@ namespace Integracao_Juridico.Controllers
             //    return response;
             //}
 
-            var response = new List<consultarProcessoResponse>
+            var response = new List<DadosProcessosLayout>
             {
-                new consultarProcessoResponse()
+                new DadosProcessosLayout
                 {
-                    mensagem = "Consulta processo 1 efetuada com sucesso",
-                    sucesso = true,
-                    processo = new tipoProcessoJudicial
+                    IdProcesso = 1,
+                    ResponseProcesso =  new consultarProcessoResponse()
                     {
-                        dadosBasicos = new tipoCabecalhoProcesso
+                        mensagem = "Consulta processo 1 efetuada com sucesso",
+                        sucesso = true,
+                        processo = new tipoProcessoJudicial
                         {
-                            numero = "0599794-97.1991.8.02.0008",
-                            dataAjuizamento = "20/03/2019",
-                            valorCausa = 555d
+                            dadosBasicos = new tipoCabecalhoProcesso
+                            {
+                                numero = "0599794-97.1991.8.02.0008",
+                                dataAjuizamento = "20/03/2019",
+                                valorCausa = 555d
+                            }
                         }
                     }
                 },
-                new consultarProcessoResponse()
+
+                new DadosProcessosLayout
                 {
-                    mensagem = "Consulta processo 2 efetuada com sucesso",
-                    sucesso = true,
-                    processo = new tipoProcessoJudicial
+                    IdProcesso = 2,
+                    ResponseProcesso = new consultarProcessoResponse()
                     {
-                        dadosBasicos = new tipoCabecalhoProcesso
+                        mensagem = "Consulta processo 2 efetuada com sucesso",
+                        sucesso = true,
+                        processo = new tipoProcessoJudicial
                         {
-                            numero = "0000001-11.2222.3.44.5555",
-                            dataAjuizamento = "25/03/2019",
-                            valorCausa = 1000d
+                            dadosBasicos = new tipoCabecalhoProcesso
+                            {
+                                numero = "0000001-11.2222.3.44.5555",
+                                dataAjuizamento = "25/03/2019",
+                                valorCausa = 1000d
+                            }
                         }
                     }
-                },
+                }
             };
 
             return response;
