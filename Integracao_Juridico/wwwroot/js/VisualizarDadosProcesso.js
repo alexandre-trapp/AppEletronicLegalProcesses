@@ -23,9 +23,15 @@ function CreateRowsProcessos(data) {
 
         var cell1 = row.insertCell(0);
         var cell2 = row.insertCell(1);
+        var cell3 = row.insertCell(3);
 
         cell1.innerHTML = dados[i].processo.dadosBasicos.dataAjuizamento;
         cell2.innerHTML = dados[i].processo.dadosBasicos.numero;
+        cell3.innerHTML = "Consulta processo - mensagem: " + dados[i].mensagem + "\n" +
+                          "Sucesso? - " + dados[i].sucesso + "\n" +
+                          "Dados básicos - numero: " + dados[i].processo.dadosBasicos.numero + "\n" +
+                          "Data ajuizamento: " + dados[i].processo.dadosBasicos.dataAjuizamento + "\n" +
+                          "Valor causa: " + dados[i].processo.dadosBasicos.valorCausa;
     }
 }
 

@@ -64,7 +64,7 @@ namespace Integracao_Juridico.Controllers
                             numero = "0599794-97.1991.8.02.0008",
                             dataAjuizamento = "20/03/2019",
                             valorCausa = 555d
-        }
+                        }
                     }
                 },
                 new consultarProcessoResponse()
