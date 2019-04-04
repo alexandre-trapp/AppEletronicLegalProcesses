@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using ConsultaPushPjeService;
 using Integracao_Juridico.Models;
@@ -24,6 +26,26 @@ namespace Integracao_Juridico.Controllers
 
             var response = RetornarResponse();
             return JsonConvert.SerializeObject(response);
+        }
+
+        public string Consultar(string idStr)
+        {
+            long id = Convert.ToInt64(idStr);
+            var response = RetornarResponse();
+
+            if (id > response.Count)
+                return string.Empty;
+            
+            var processo1 = from p in response
+                            where p.IdProcesso == id -1
+                            select p.ResponseProcesso;
+
+            return string.Format("Consulta processo - mensagem: " + processo1.First().mensagem + "{0}" +
+                                 "Sucesso? - " + (processo1.First().sucesso ? "Sim" : "Não") + "{0}" +
+                                 "Dados básicos - numero: " + processo1.First().processo.dadosBasicos.numero + "{0}" +
+                                 "Data ajuizamento: " + processo1.First().processo.dadosBasicos.dataAjuizamento + "{0}" +
+                                 "Valor causa: " + processo1.First().processo.dadosBasicos.valorCausa, 
+                                 Environment.NewLine); 
         }
 
         private List<DadosProcessosLayout> RetornarResponse()

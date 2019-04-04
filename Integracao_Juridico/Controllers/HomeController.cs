@@ -20,5 +20,10 @@ namespace Integracao_Juridico.Controllers
         {
             return new ConsultaTestePjePush().Consultar();
         }
+
+        public string ObterDetalhesProcesso(string id)
+        {
+            return new ConsultaTestePjePush().Consultar(id);
+        }
     }
 }

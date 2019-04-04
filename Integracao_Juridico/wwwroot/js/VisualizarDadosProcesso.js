@@ -1,6 +1,4 @@
-﻿var dadoProcessosJson = null;
-
-$(document).ready(function () {
+﻿$(document).ready(function () {
 
     var url = "/Home/DadosProcesso";
     $.get(url, null, function (data) {
@@ -9,14 +7,16 @@ $(document).ready(function () {
             return;
 
         CreateRowsProcessos(data);
-        clicarNaLinha();
     });
-    
+
+    var clicarLinha = clicarNaLinha();
+    var prm = Sys.WebForms.PageRequestManager.getInstance();
+    prm.add_endRequest(clicarLinha);
 });
 
 function CreateRowsProcessos(data) {
 
-    dadoProcessosJson = JSON.parse(data);
+    var dadoProcessosJson = JSON.parse(data);
     var table = document.getElementById("tabelaProcessos");
 
     for (var i = dadoProcessosJson.length -1; i >= 0; i--) {
@@ -32,65 +32,64 @@ function CreateRowsProcessos(data) {
         cell2.innerHTML = dadoProcessosJson[i].ResponseProcesso.processo.dadosBasicos.dataAjuizamento;
         cell3.innerHTML = dadoProcessosJson[i].ResponseProcesso.processo.dadosBasicos.numero;
 
-        /*cell3.innerHTML = "Consulta processo - mensagem: " + dados[i].mensagem + "\n" +
-                          "Sucesso? - " + (dados[i].sucesso ? "Sim" : "Não") + "\n" +
-                          "Dados básicos - numero: " + dados[i].processo.dadosBasicos.numero + "\n" +
-                          "Data ajuizamento: " + dados[i].processo.dadosBasicos.dataAjuizamento + "\n" +
-                          "Valor causa: " + dados[i].processo.dadosBasicos.valorCausa;*/
+        /*cell3.innerHTML = */
     }
 }
 
 function clicarNaLinha() {
 
 
+    var tabela = document.getElementById("tabelaProcessos");
+    var linhas = tabela.getElementsByTagName("tr");
 
-    $("#tabelaProcessos tr").click(function () {
-        var tabela = document.getElementById("tabelaProcessos");
-        var linhas = tabela.getElementsByTagName("tr");
+    for (i = 0; i < rows.length; i++)
+    {
+        var currentRow = table.rows[i];
+        var createClickHandler =
+            function (row)
+            {
+                return function () {
+                    var cell = row.getElementsByTagName("td")[0];
+                    var id = cell.innerHTML;
 
-        for (var i = 0; i < linhas.length; i++) {
-
-            selLinha(this, false);
-        }
-
-        var selecionados = tabela.getElementsByClassName("selecionado");
-        if (selecionados.length < 0) {
-            return false;
-        }
-
-        var dados = "";
-
-        for (var i = 0; i < selecionados.length; i++) {
-
-            var selecionado = selecionados[i];
-            selecionado = selecionado.getElementsByTagName("td");
-
-            var idProcesso = selecionado[0].innerHTML.trim();
-            var index = -1;
-
-            var filteredObj = dadoProcessosJson.find(function (item, i) {
-                if (item.name === idProcesso) {
-                    index = i;
-                    return i;
-                }
-            });
-
-            dados = filteredObj;
-            //dados = "Data de distribuição: " + selecionado[0].innerHTML.trim() + "\nNúmero do processo: " + selecionado[1].innerHTML.trim();
-        }
-
-        $("#dadosBasicos").html(dados);
-    });
-
-    function selLinha(linha, multiplos) {
-
-        if (!multiplos) {
-            var linhas = linha.parentElement.getElementsByTagName("tr");
-            for (var i = 0; i < linhas.length; i++) {
-                var linha_ = linhas[i];
-                linha_.classList.remove("selecionado");
+                    alert("id:" + id);
+                };
             }
-        }
-        linha.classList.toggle("selecionado");
+
+        currentRow.onclick = createClickHandler(currentRow);
     }
+
+    var selecionados = tabela.getElementsByClassName("selecionado");
+    if (selecionados.length < 0) {
+        return false;
+    }
+
+    var dados = "";
+
+    for (var i = 0; i < selecionados.length; i++) {
+
+        var selecionado = selecionados[i];
+        selecionado = selecionado.getElementsByTagName("td");
+
+        
+    }
+
+    $("#dadosBasicos").html(data);
+}
+
+function ObterDados(idProcesso) {
+
+    var url = "/Home/ObterDetalhesProcesso";
+    $.get(
+        url,
+        idProcesso,
+
+        function (data) {
+            if (data === null || data === undefined || data.length === 0)
+                return;
+
+            console.log(data);
+        });
+}
+
 }
