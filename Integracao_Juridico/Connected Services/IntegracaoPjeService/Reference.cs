@@ -7,49 +7,49 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ConsultaPushPjeService
+namespace IntegracaoPjeService
 {
     
     
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.1")]
-    [System.ServiceModel.ServiceContractAttribute(Name="servico-intercomunicacao-2.2.2", Namespace="http://www.cnj.jus.br/servico-intercomunicacao-2.2.2/", ConfigurationName="ConsultaPushPjeService.servicointercomunicacao222")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.0")]
+    [System.ServiceModel.ServiceContractAttribute(Name="servico-intercomunicacao-2.2.2", Namespace="http://www.cnj.jus.br/servico-intercomunicacao-2.2.2/", ConfigurationName="IntegracaoPjeService.servicointercomunicacao222")]
     public interface servicointercomunicacao222
     {
         
         // CODEGEN: Generating message contract since the operation has multiple return values.
         [System.ServiceModel.OperationContractAttribute(Action="http://www.cnj.jus.br/servico-intercomunicacao-2.2.2/consultarAlteracao", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Threading.Tasks.Task<ConsultaPushPjeService.consultarAlteracaoResponse> consultarAlteracaoAsync(ConsultaPushPjeService.consultarAlteracao request);
+        System.Threading.Tasks.Task<IntegracaoPjeService.consultarAlteracaoResponse> consultarAlteracaoAsync(IntegracaoPjeService.consultarAlteracao request);
         
         // CODEGEN: Generating message contract since the operation has multiple return values.
         [System.ServiceModel.OperationContractAttribute(Action="http://www.cnj.jus.br/servico-intercomunicacao-2.2.2/confirmarRecebimento", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Threading.Tasks.Task<ConsultaPushPjeService.confirmarRecebimentoResponse> confirmarRecebimentoAsync(ConsultaPushPjeService.confirmarRecebimento request);
+        System.Threading.Tasks.Task<IntegracaoPjeService.confirmarRecebimentoResponse> confirmarRecebimentoAsync(IntegracaoPjeService.confirmarRecebimento request);
         
         // CODEGEN: Generating message contract since the operation has multiple return values.
         [System.ServiceModel.OperationContractAttribute(Action="http://www.cnj.jus.br/servico-intercomunicacao-2.2.2/consultarAvisosPendentes", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Threading.Tasks.Task<ConsultaPushPjeService.consultarAvisosPendentesResponse> consultarAvisosPendentesAsync(ConsultaPushPjeService.consultarAvisosPendentes request);
+        System.Threading.Tasks.Task<IntegracaoPjeService.consultarAvisosPendentesResponse> consultarAvisosPendentesAsync(IntegracaoPjeService.consultarAvisosPendentes request);
         
         // CODEGEN: Generating message contract since the operation has multiple return values.
         [System.ServiceModel.OperationContractAttribute(Action="http://www.cnj.jus.br/servico-intercomunicacao-2.2.2/consultarProcesso", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Threading.Tasks.Task<ConsultaPushPjeService.consultarProcessoResponse> consultarProcessoAsync(ConsultaPushPjeService.consultarProcesso request);
+        System.Threading.Tasks.Task<IntegracaoPjeService.consultarProcessoResponse> consultarProcessoAsync(IntegracaoPjeService.consultarProcesso request);
         
         // CODEGEN: Generating message contract since the operation has multiple return values.
         [System.ServiceModel.OperationContractAttribute(Action="http://www.cnj.jus.br/servico-intercomunicacao-2.2.2/consultarTeorComunicacao", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Threading.Tasks.Task<ConsultaPushPjeService.consultarTeorComunicacaoResponse> consultarTeorComunicacaoAsync(ConsultaPushPjeService.consultarTeorComunicacao request);
+        System.Threading.Tasks.Task<IntegracaoPjeService.consultarTeorComunicacaoResponse> consultarTeorComunicacaoAsync(IntegracaoPjeService.consultarTeorComunicacao request);
         
         // CODEGEN: Generating message contract since the operation has multiple return values.
         [System.ServiceModel.OperationContractAttribute(Action="http://www.cnj.jus.br/servico-intercomunicacao-2.2.2/entregarManifestacaoProcessu" +
             "al", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Threading.Tasks.Task<ConsultaPushPjeService.entregarManifestacaoProcessualResponse> entregarManifestacaoProcessualAsync(ConsultaPushPjeService.entregarManifestacaoProcessual request);
+        System.Threading.Tasks.Task<IntegracaoPjeService.entregarManifestacaoProcessualResponse> entregarManifestacaoProcessualAsync(IntegracaoPjeService.entregarManifestacaoProcessual request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.0")]
     [System.ServiceModel.MessageContractAttribute(WrapperName="consultarAlteracao", WrapperNamespace="http://www.cnj.jus.br/servico-intercomunicacao-2.2.2/", IsWrapped=true)]
     public partial class consultarAlteracao
     {
@@ -79,7 +79,7 @@ namespace ConsultaPushPjeService
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.0")]
     [System.ServiceModel.MessageContractAttribute(WrapperName="consultarAlteracaoResposta", WrapperNamespace="http://www.cnj.jus.br/servico-intercomunicacao-2.2.2/", IsWrapped=true)]
     public partial class consultarAlteracaoResponse
     {
@@ -119,7 +119,7 @@ namespace ConsultaPushPjeService
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.0")]
     [System.ServiceModel.MessageContractAttribute(WrapperName="confirmarRecebimento", WrapperNamespace="http://www.cnj.jus.br/servico-intercomunicacao-2.2.2/", IsWrapped=true)]
     public partial class confirmarRecebimento
     {
@@ -149,7 +149,7 @@ namespace ConsultaPushPjeService
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.0")]
     [System.ServiceModel.MessageContractAttribute(WrapperName="confirmarRecebimentoResposta", WrapperNamespace="http://www.cnj.jus.br/servico-intercomunicacao-2.2.2/", IsWrapped=true)]
     public partial class confirmarRecebimentoResponse
     {
@@ -174,7 +174,7 @@ namespace ConsultaPushPjeService
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.cnj.jus.br/intercomunicacao-2.2.2")]
     public partial class tipoAvisoComunicacaoPendente
@@ -262,7 +262,7 @@ namespace ConsultaPushPjeService
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.cnj.jus.br/intercomunicacao-2.2.2")]
     public partial class tipoParte
@@ -430,7 +430,7 @@ namespace ConsultaPushPjeService
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.cnj.jus.br/intercomunicacao-2.2.2")]
     public partial class tipoPessoa
@@ -694,7 +694,7 @@ namespace ConsultaPushPjeService
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.cnj.jus.br/intercomunicacao-2.2.2")]
     public partial class tipoDocumentoIdentificacao
@@ -766,7 +766,7 @@ namespace ConsultaPushPjeService
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.0")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.cnj.jus.br/intercomunicacao-2.2.2")]
     public enum modalidadeDocumentoIdentificador
     {
@@ -824,7 +824,7 @@ namespace ConsultaPushPjeService
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.cnj.jus.br/intercomunicacao-2.2.2")]
     public partial class tipoComunicacaoProcessual
@@ -1072,7 +1072,7 @@ namespace ConsultaPushPjeService
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.cnj.jus.br/intercomunicacao-2.2.2")]
     public partial class tipoDocumento
@@ -1352,7 +1352,7 @@ namespace ConsultaPushPjeService
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.cnj.jus.br/intercomunicacao-2.2.2")]
     public partial class tipoAssinatura
@@ -1456,7 +1456,7 @@ namespace ConsultaPushPjeService
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.cnj.jus.br/intercomunicacao-2.2.2")]
     public partial class tipoSignatarioSimples
@@ -1496,7 +1496,7 @@ namespace ConsultaPushPjeService
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.cnj.jus.br/intercomunicacao-2.2.2")]
     public partial class tipoParametro
@@ -1536,7 +1536,7 @@ namespace ConsultaPushPjeService
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.0")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.cnj.jus.br/intercomunicacao-2.2.2")]
     public enum tipoPrazo
     {
@@ -1561,7 +1561,7 @@ namespace ConsultaPushPjeService
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.cnj.jus.br/intercomunicacao-2.2.2")]
     public partial class tipoMovimentoLocal
@@ -1633,7 +1633,7 @@ namespace ConsultaPushPjeService
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.cnj.jus.br/intercomunicacao-2.2.2")]
     public partial class tipoMovimentoNacional
@@ -1673,7 +1673,7 @@ namespace ConsultaPushPjeService
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.cnj.jus.br/intercomunicacao-2.2.2")]
     public partial class tipoMovimentoProcessual
@@ -1809,7 +1809,7 @@ namespace ConsultaPushPjeService
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.cnj.jus.br/intercomunicacao-2.2.2")]
     public partial class tipoProcessoJudicial
@@ -1865,7 +1865,7 @@ namespace ConsultaPushPjeService
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.cnj.jus.br/intercomunicacao-2.2.2")]
     public partial class tipoCabecalhoProcesso
@@ -2209,7 +2209,7 @@ namespace ConsultaPushPjeService
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.cnj.jus.br/intercomunicacao-2.2.2")]
     public partial class tipoPoloProcessual
@@ -2265,7 +2265,7 @@ namespace ConsultaPushPjeService
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.0")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.cnj.jus.br/intercomunicacao-2.2.2")]
     public enum modalidadePoloProcessual
     {
@@ -2293,7 +2293,7 @@ namespace ConsultaPushPjeService
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.cnj.jus.br/intercomunicacao-2.2.2")]
     public partial class tipoAssuntoProcessual
@@ -2381,7 +2381,7 @@ namespace ConsultaPushPjeService
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.cnj.jus.br/intercomunicacao-2.2.2")]
     public partial class tipoAssuntoLocal
@@ -2453,7 +2453,7 @@ namespace ConsultaPushPjeService
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.cnj.jus.br/intercomunicacao-2.2.2")]
     public partial class tipoVinculacaoProcessual
@@ -2493,7 +2493,7 @@ namespace ConsultaPushPjeService
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.0")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.cnj.jus.br/intercomunicacao-2.2.2")]
     public enum modalidadeVinculacaoProcesso
     {
@@ -2524,7 +2524,7 @@ namespace ConsultaPushPjeService
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.cnj.jus.br/intercomunicacao-2.2.2")]
     public partial class tipoOrgaoJulgador
@@ -2596,7 +2596,7 @@ namespace ConsultaPushPjeService
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.cnj.jus.br/intercomunicacao-2.2.2")]
     public partial class tipoRepresentanteProcessual
@@ -2700,7 +2700,7 @@ namespace ConsultaPushPjeService
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.cnj.jus.br/intercomunicacao-2.2.2")]
     public partial class tipoEndereco
@@ -2836,7 +2836,7 @@ namespace ConsultaPushPjeService
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.0")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.cnj.jus.br/intercomunicacao-2.2.2")]
     public enum modalidadeRepresentanteProcessual
     {
@@ -2858,7 +2858,7 @@ namespace ConsultaPushPjeService
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.cnj.jus.br/intercomunicacao-2.2.2")]
     public partial class tipoRelacionamentoPessoal
@@ -2914,7 +2914,7 @@ namespace ConsultaPushPjeService
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.0")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.cnj.jus.br/intercomunicacao-2.2.2")]
     public enum modalidadesRelacionamentoPessoal
     {
@@ -2936,7 +2936,7 @@ namespace ConsultaPushPjeService
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.0")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.cnj.jus.br/intercomunicacao-2.2.2")]
     public enum modalidadeGeneroPessoa
     {
@@ -2952,7 +2952,7 @@ namespace ConsultaPushPjeService
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.0")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.cnj.jus.br/intercomunicacao-2.2.2")]
     public enum tipoQualificacaoPessoa
     {
@@ -2971,7 +2971,7 @@ namespace ConsultaPushPjeService
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.0")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.cnj.jus.br/intercomunicacao-2.2.2")]
     public enum modalidadeRelacionamentoProcessual
     {
@@ -2993,7 +2993,7 @@ namespace ConsultaPushPjeService
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.0")]
     [System.ServiceModel.MessageContractAttribute(WrapperName="consultarAvisosPendentes", WrapperNamespace="http://www.cnj.jus.br/servico-intercomunicacao-2.2.2/", IsWrapped=true)]
     public partial class consultarAvisosPendentes
     {
@@ -3028,7 +3028,7 @@ namespace ConsultaPushPjeService
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.0")]
     [System.ServiceModel.MessageContractAttribute(WrapperName="consultarAvisosPendentesResposta", WrapperNamespace="http://www.cnj.jus.br/servico-intercomunicacao-2.2.2/", IsWrapped=true)]
     public partial class consultarAvisosPendentesResponse
     {
@@ -3043,13 +3043,13 @@ namespace ConsultaPushPjeService
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://www.cnj.jus.br/tipos-servico-intercomunicacao-2.2.2", Order=2)]
         [System.Xml.Serialization.XmlElementAttribute("aviso", Namespace="http://www.cnj.jus.br/tipos-servico-intercomunicacao-2.2.2", IsNullable=true)]
-        public ConsultaPushPjeService.tipoAvisoComunicacaoPendente[] aviso;
+        public IntegracaoPjeService.tipoAvisoComunicacaoPendente[] aviso;
         
         public consultarAvisosPendentesResponse()
         {
         }
         
-        public consultarAvisosPendentesResponse(bool sucesso, string mensagem, ConsultaPushPjeService.tipoAvisoComunicacaoPendente[] aviso)
+        public consultarAvisosPendentesResponse(bool sucesso, string mensagem, IntegracaoPjeService.tipoAvisoComunicacaoPendente[] aviso)
         {
             this.sucesso = sucesso;
             this.mensagem = mensagem;
@@ -3058,7 +3058,7 @@ namespace ConsultaPushPjeService
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.0")]
     [System.ServiceModel.MessageContractAttribute(WrapperName="consultarProcesso", WrapperNamespace="http://www.cnj.jus.br/servico-intercomunicacao-2.2.2/", IsWrapped=true)]
     public partial class consultarProcesso
     {
@@ -3113,7 +3113,7 @@ namespace ConsultaPushPjeService
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.0")]
     [System.ServiceModel.MessageContractAttribute(WrapperName="consultarProcessoResposta", WrapperNamespace="http://www.cnj.jus.br/servico-intercomunicacao-2.2.2/", IsWrapped=true)]
     public partial class consultarProcessoResponse
     {
@@ -3128,13 +3128,13 @@ namespace ConsultaPushPjeService
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://www.cnj.jus.br/tipos-servico-intercomunicacao-2.2.2", Order=2)]
         [System.Xml.Serialization.XmlElementAttribute(Namespace="http://www.cnj.jus.br/tipos-servico-intercomunicacao-2.2.2")]
-        public ConsultaPushPjeService.tipoProcessoJudicial processo;
+        public IntegracaoPjeService.tipoProcessoJudicial processo;
         
         public consultarProcessoResponse()
         {
         }
         
-        public consultarProcessoResponse(bool sucesso, string mensagem, ConsultaPushPjeService.tipoProcessoJudicial processo)
+        public consultarProcessoResponse(bool sucesso, string mensagem, IntegracaoPjeService.tipoProcessoJudicial processo)
         {
             this.sucesso = sucesso;
             this.mensagem = mensagem;
@@ -3143,7 +3143,7 @@ namespace ConsultaPushPjeService
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.0")]
     [System.ServiceModel.MessageContractAttribute(WrapperName="consultarTeorComunicacao", WrapperNamespace="http://www.cnj.jus.br/servico-intercomunicacao-2.2.2/", IsWrapped=true)]
     public partial class consultarTeorComunicacao
     {
@@ -3178,7 +3178,7 @@ namespace ConsultaPushPjeService
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.0")]
     [System.ServiceModel.MessageContractAttribute(WrapperName="consultarTeorComunicacaoResposta", WrapperNamespace="http://www.cnj.jus.br/servico-intercomunicacao-2.2.2/", IsWrapped=true)]
     public partial class consultarTeorComunicacaoResponse
     {
@@ -3193,13 +3193,13 @@ namespace ConsultaPushPjeService
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://www.cnj.jus.br/tipos-servico-intercomunicacao-2.2.2", Order=2)]
         [System.Xml.Serialization.XmlElementAttribute("comunicacao", Namespace="http://www.cnj.jus.br/tipos-servico-intercomunicacao-2.2.2", IsNullable=true)]
-        public ConsultaPushPjeService.tipoComunicacaoProcessual[] comunicacao;
+        public IntegracaoPjeService.tipoComunicacaoProcessual[] comunicacao;
         
         public consultarTeorComunicacaoResponse()
         {
         }
         
-        public consultarTeorComunicacaoResponse(bool sucesso, string mensagem, ConsultaPushPjeService.tipoComunicacaoProcessual[] comunicacao)
+        public consultarTeorComunicacaoResponse(bool sucesso, string mensagem, IntegracaoPjeService.tipoComunicacaoProcessual[] comunicacao)
         {
             this.sucesso = sucesso;
             this.mensagem = mensagem;
@@ -3208,7 +3208,7 @@ namespace ConsultaPushPjeService
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.0")]
     [System.ServiceModel.MessageContractAttribute(WrapperName="entregarManifestacaoProcessual", WrapperNamespace="http://www.cnj.jus.br/servico-intercomunicacao-2.2.2/", IsWrapped=true)]
     public partial class entregarManifestacaoProcessual
     {
@@ -3227,11 +3227,11 @@ namespace ConsultaPushPjeService
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://www.cnj.jus.br/tipos-servico-intercomunicacao-2.2.2", Order=3)]
         [System.Xml.Serialization.XmlElementAttribute(Namespace="http://www.cnj.jus.br/tipos-servico-intercomunicacao-2.2.2")]
-        public ConsultaPushPjeService.tipoCabecalhoProcesso dadosBasicos;
+        public IntegracaoPjeService.tipoCabecalhoProcesso dadosBasicos;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://www.cnj.jus.br/tipos-servico-intercomunicacao-2.2.2", Order=4)]
         [System.Xml.Serialization.XmlElementAttribute("documento", Namespace="http://www.cnj.jus.br/tipos-servico-intercomunicacao-2.2.2")]
-        public ConsultaPushPjeService.tipoDocumento[] documento;
+        public IntegracaoPjeService.tipoDocumento[] documento;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://www.cnj.jus.br/tipos-servico-intercomunicacao-2.2.2", Order=5)]
         [System.Xml.Serialization.XmlElementAttribute(Namespace="http://www.cnj.jus.br/tipos-servico-intercomunicacao-2.2.2")]
@@ -3239,13 +3239,13 @@ namespace ConsultaPushPjeService
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://www.cnj.jus.br/tipos-servico-intercomunicacao-2.2.2", Order=6)]
         [System.Xml.Serialization.XmlElementAttribute("parametros", Namespace="http://www.cnj.jus.br/tipos-servico-intercomunicacao-2.2.2", IsNullable=true)]
-        public ConsultaPushPjeService.tipoParametro[] parametros;
+        public IntegracaoPjeService.tipoParametro[] parametros;
         
         public entregarManifestacaoProcessual()
         {
         }
         
-        public entregarManifestacaoProcessual(string idManifestante, string senhaManifestante, string numeroProcesso, ConsultaPushPjeService.tipoCabecalhoProcesso dadosBasicos, ConsultaPushPjeService.tipoDocumento[] documento, string dataEnvio, ConsultaPushPjeService.tipoParametro[] parametros)
+        public entregarManifestacaoProcessual(string idManifestante, string senhaManifestante, string numeroProcesso, IntegracaoPjeService.tipoCabecalhoProcesso dadosBasicos, IntegracaoPjeService.tipoDocumento[] documento, string dataEnvio, IntegracaoPjeService.tipoParametro[] parametros)
         {
             this.idManifestante = idManifestante;
             this.senhaManifestante = senhaManifestante;
@@ -3258,7 +3258,7 @@ namespace ConsultaPushPjeService
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.0")]
     [System.ServiceModel.MessageContractAttribute(WrapperName="entregarManifestacaoProcessualResposta", WrapperNamespace="http://www.cnj.jus.br/servico-intercomunicacao-2.2.2/", IsWrapped=true)]
     public partial class entregarManifestacaoProcessualResponse
     {
@@ -3285,13 +3285,13 @@ namespace ConsultaPushPjeService
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://www.cnj.jus.br/tipos-servico-intercomunicacao-2.2.2", Order=5)]
         [System.Xml.Serialization.XmlElementAttribute("parametro", Namespace="http://www.cnj.jus.br/tipos-servico-intercomunicacao-2.2.2", IsNullable=true)]
-        public ConsultaPushPjeService.tipoParametro[] parametro;
+        public IntegracaoPjeService.tipoParametro[] parametro;
         
         public entregarManifestacaoProcessualResponse()
         {
         }
         
-        public entregarManifestacaoProcessualResponse(bool sucesso, string mensagem, string protocoloRecebimento, string dataOperacao, byte[] recibo, ConsultaPushPjeService.tipoParametro[] parametro)
+        public entregarManifestacaoProcessualResponse(bool sucesso, string mensagem, string protocoloRecebimento, string dataOperacao, byte[] recibo, IntegracaoPjeService.tipoParametro[] parametro)
         {
             this.sucesso = sucesso;
             this.mensagem = mensagem;
@@ -3302,14 +3302,14 @@ namespace ConsultaPushPjeService
         }
     }
     
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.1")]
-    public interface servicointercomunicacao222Channel : ConsultaPushPjeService.servicointercomunicacao222, System.ServiceModel.IClientChannel
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.0")]
+    public interface servicointercomunicacao222Channel : IntegracaoPjeService.servicointercomunicacao222, System.ServiceModel.IClientChannel
     {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.1")]
-    public partial class servicointercomunicacao222Client : System.ServiceModel.ClientBase<ConsultaPushPjeService.servicointercomunicacao222>, ConsultaPushPjeService.servicointercomunicacao222
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.0")]
+    public partial class servicointercomunicacao222Client : System.ServiceModel.ClientBase<IntegracaoPjeService.servicointercomunicacao222>, IntegracaoPjeService.servicointercomunicacao222
     {
         
         public servicointercomunicacao222Client(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
@@ -3317,32 +3317,32 @@ namespace ConsultaPushPjeService
         {
         }
         
-        public System.Threading.Tasks.Task<ConsultaPushPjeService.consultarAlteracaoResponse> consultarAlteracaoAsync(ConsultaPushPjeService.consultarAlteracao request)
+        public System.Threading.Tasks.Task<IntegracaoPjeService.consultarAlteracaoResponse> consultarAlteracaoAsync(IntegracaoPjeService.consultarAlteracao request)
         {
             return base.Channel.consultarAlteracaoAsync(request);
         }
         
-        public System.Threading.Tasks.Task<ConsultaPushPjeService.confirmarRecebimentoResponse> confirmarRecebimentoAsync(ConsultaPushPjeService.confirmarRecebimento request)
+        public System.Threading.Tasks.Task<IntegracaoPjeService.confirmarRecebimentoResponse> confirmarRecebimentoAsync(IntegracaoPjeService.confirmarRecebimento request)
         {
             return base.Channel.confirmarRecebimentoAsync(request);
         }
         
-        public System.Threading.Tasks.Task<ConsultaPushPjeService.consultarAvisosPendentesResponse> consultarAvisosPendentesAsync(ConsultaPushPjeService.consultarAvisosPendentes request)
+        public System.Threading.Tasks.Task<IntegracaoPjeService.consultarAvisosPendentesResponse> consultarAvisosPendentesAsync(IntegracaoPjeService.consultarAvisosPendentes request)
         {
             return base.Channel.consultarAvisosPendentesAsync(request);
         }
         
-        public System.Threading.Tasks.Task<ConsultaPushPjeService.consultarProcessoResponse> consultarProcessoAsync(ConsultaPushPjeService.consultarProcesso request)
+        public System.Threading.Tasks.Task<IntegracaoPjeService.consultarProcessoResponse> consultarProcessoAsync(IntegracaoPjeService.consultarProcesso request)
         {
             return base.Channel.consultarProcessoAsync(request);
         }
         
-        public System.Threading.Tasks.Task<ConsultaPushPjeService.consultarTeorComunicacaoResponse> consultarTeorComunicacaoAsync(ConsultaPushPjeService.consultarTeorComunicacao request)
+        public System.Threading.Tasks.Task<IntegracaoPjeService.consultarTeorComunicacaoResponse> consultarTeorComunicacaoAsync(IntegracaoPjeService.consultarTeorComunicacao request)
         {
             return base.Channel.consultarTeorComunicacaoAsync(request);
         }
         
-        public System.Threading.Tasks.Task<ConsultaPushPjeService.entregarManifestacaoProcessualResponse> entregarManifestacaoProcessualAsync(ConsultaPushPjeService.entregarManifestacaoProcessual request)
+        public System.Threading.Tasks.Task<IntegracaoPjeService.entregarManifestacaoProcessualResponse> entregarManifestacaoProcessualAsync(IntegracaoPjeService.entregarManifestacaoProcessual request)
         {
             return base.Channel.entregarManifestacaoProcessualAsync(request);
         }

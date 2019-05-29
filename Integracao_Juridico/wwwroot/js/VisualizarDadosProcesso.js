@@ -91,5 +91,3 @@ function ObterDados(idProcesso) {
             console.log(data);
         });
 }
-
-}

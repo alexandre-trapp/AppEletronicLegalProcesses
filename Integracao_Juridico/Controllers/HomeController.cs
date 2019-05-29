@@ -14,7 +14,7 @@ namespace Integracao_Juridico.Controllers
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
+        } 
 
         public string DadosProcesso()
         {

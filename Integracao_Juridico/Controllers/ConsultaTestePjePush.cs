@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.ServiceModel;
 using System.Text;
-using ConsultaPushPjeService;
+using System.Threading.Tasks;
+using IntegracaoPjeService;
 using Integracao_Juridico.Models;
 using Newtonsoft.Json;
 
@@ -11,21 +13,13 @@ namespace Integracao_Juridico.Controllers
     public class ConsultaTestePjePush
     {
         private const string UrlServico = @"https://wwwh.cnj.jus.br/pjemni-2x/intercomunicacao?wsdl";
-        private const string UserName = "alexandre.trapp@hotmail.com";
-        private const string Password = "15303@le371030";
+        private const string UserName = "75293730215";
+        private const string Password = "admin123";
 
         public string Consultar()
         {
-            //response.Start();
-
-            //while (!response.IsCompleted)
-            //    response.Wait();
-
-            //if (!response.IsCompletedSuccessfully)
-            //    throw new Exception("Erro na consulta do processo: " + response.Status + response.Exception);
-
             var response = RetornarResponse();
-            return JsonConvert.SerializeObject(response);
+            return JsonConvert.SerializeObject(response.Result);
         }
 
         public string Consultar(string idStr)
@@ -33,48 +27,60 @@ namespace Integracao_Juridico.Controllers
             long id = Convert.ToInt64(idStr);
             var response = RetornarResponse();
 
-            if (id > response.Count)
-                return string.Empty;
-            
-            var processo1 = from p in response
-                            where p.IdProcesso == id -1
-                            select p.ResponseProcesso;
+            var retorno = response.Result;
 
-            return string.Format("Consulta processo - mensagem: " + processo1.First().mensagem + "{0}" +
-                                 "Sucesso? - " + (processo1.First().sucesso ? "Sim" : "Não") + "{0}" +
-                                 "Dados básicos - numero: " + processo1.First().processo.dadosBasicos.numero + "{0}" +
-                                 "Data ajuizamento: " + processo1.First().processo.dadosBasicos.dataAjuizamento + "{0}" +
-                                 "Valor causa: " + processo1.First().processo.dadosBasicos.valorCausa, 
+            return string.Format("Consulta processo - mensagem: " + retorno.mensagem + "{0}" +
+                                 "Sucesso? - " + (retorno.mensagem.Contains("sucesso") ? "Sim" : "Não") + "{0}" +
+                                 "Dados básicos - numero: " + retorno.processo.dadosBasicos.numero + "{0}" +
+                                 "Data ajuizamento: " + retorno.processo.dadosBasicos.dataAjuizamento + "{0}" +
+                                 "Valor causa: " + retorno.processo.dadosBasicos.valorCausa, 
                                  Environment.NewLine); 
         }
 
-        private List<DadosProcessosLayout> RetornarResponse()
+        private Task<consultarProcessoResponse> RetornarResponse()
         {
-            //var bindingConexao = new BasicHttpBinding
-            //{
-            //    MaxReceivedMessageSize = 2147483647,
-            //    SendTimeout = TimeSpan.MaxValue
-            //};
-            //bindingConexao.Security.Mode = BasicHttpSecurityMode.None;
-            //bindingConexao.Security.Transport.ClientCredentialType = HttpClientCredentialType.Basic;
+            var bindingConexao = new BasicHttpBinding
+            {
+                MaxReceivedMessageSize = 2147483647,
+                SendTimeout = TimeSpan.MaxValue
+            };
+            bindingConexao.Security.Mode = BasicHttpSecurityMode.None;
+            bindingConexao.Security.Transport.ClientCredentialType = HttpClientCredentialType.Basic;
 
-            //var endpoint = new EndpointAddress(new Uri(UrlServico));
-            //var client = new servicointercomunicacao222Client(bindingConexao, endpoint);
+            var endpoint = new EndpointAddress(new Uri(UrlServico));
+            var client = new servicointercomunicacao222Client(bindingConexao, endpoint);
 
-            //client.ClientCredentials.UserName.UserName = UserName;
-            //client.ClientCredentials.UserName.Password = Password;
+            Task<consultarProcessoResponse> response = null;
 
-            //using (new OperationContextScope(client.InnerChannel))
-            //{
-            //    var request = GetRequest();
-            //    var response = client.consultarProcessoAsync(request);
-            //    if (response == null)
-            //        throw new Exception("response nulo");
+            var request = GetRequest();
+            response = client.consultarProcessoAsync(request);
+            response.Start();
 
-            //    return response;
-            //}
+            while (!response.IsCompleted)
+                response.Wait();
 
-            var response = new List<DadosProcessosLayout>
+            if (!response.IsCompletedSuccessfully)
+                throw new OperationCanceledException("Erro na consulta do processo: " + response.Status + response.Exception);
+
+            if (response.Result == null)
+                throw new OperationCanceledException("response nulo");
+
+            return response;
+        }
+
+        private consultarProcesso GetRequest()
+        {
+            return new consultarProcesso
+            {
+                idConsultante = UserName,
+                senhaConsultante = Password,
+                numeroProcesso = "0000003-34.2018.2.00.0200"
+            };
+        }
+        
+        private static List<DadosProcessosLayout> GetDadosTeste()
+        {
+            return new List<DadosProcessosLayout>
             {
                 new DadosProcessosLayout
                 {
@@ -114,8 +120,6 @@ namespace Integracao_Juridico.Controllers
                     }
                 }
             };
-
-            return response;
         }
     }
 }
